@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Orders List</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Purchase Orders</h1>
+    <button onclick="createNewPO()">Create New</button>
+    <table>
+        <thead>
+            <tr>
+                <th>PO Number</th>
+                <th>Order Date</th>
+                <th>Buyer</th>
+                <th>Supplier</th>
+                <th>Total Amount</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example row, replace with dynamic content as needed -->
+            <tr>
+                <td><a href="POInputCXml.html?poNumber=12345">12345</a></td>
+                <td>2023-10-01</td>
+                <td>John Doe</td>
+                <td>Acme Corp</td>
+                <td>$1000.00</td>
+                <td>Approved</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function createNewPO() {
+            // Add logic to create a new purchase order
+            alert('Create New Purchase Order button clicked');
+        }
+    </script>
+</body>
+</html>
