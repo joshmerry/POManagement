@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Order Input Form</title>
+</head>
+<body>
+    <h1>Purchase Order Input Form</h1>
+    <form action="/submit-po" method="post">
+        <fieldset>
+            <legend>Order Information</legend>
+            <label for="orderID">Order ID:</label>
+            <input type="text" id="orderID" name="orderID" required><br><br>
+
+            <label for="orderDate">Order Date:</label>
+            <input type="date" id="orderDate" name="orderDate" required><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Buyer Information</legend>
+            <label for="buyerName">Buyer Name:</label>
+            <input type="text" id="buyerName" name="buyerName" required><br><br>
+
+            <label for="buyerEmail">Buyer Email:</label>
+            <input type="email" id="buyerEmail" name="buyerEmail" required><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Supplier Information</legend>
+            <label for="supplierName">Supplier Name:</label>
+            <input type="text" id="supplierName" name="supplierName" required><br><br>
+
+            <label for="supplierEmail">Supplier Email:</label>
+            <input type="email" id="supplierEmail" name="supplierEmail" required><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Item Information</legend>
+            <label for="itemID">Item ID:</label>
+            <input type="text" id="itemID" name="itemID" required><br><br>
+
+            <label for="itemDescription">Item Description:</label>
+            <input type="text" id="itemDescription" name="itemDescription" required><br><br>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required><br><br>
+
+            <label for="unitPrice">Unit Price:</label>
+            <input type="number" id="unitPrice" name="unitPrice" step="0.01" required><br><br>
+        </fieldset>
+
+        <input type="submit" value="Submit Purchase Order">
+    </form>
+</body>
+</html>
