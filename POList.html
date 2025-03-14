@@ -17,39 +17,68 @@
             background-color: #f2f2f2;
             text-align: left;
         }
+        body {
+            display: flex;
+        }
+        nav {
+            width: 200px;
+            background-color: #f8f8f8;
+            padding: 15px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        nav a {
+            display: block;
+            padding: 10px 0;
+            color: #333;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+        }
+        main {
+            flex-grow: 1;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
-    <h1>Purchase Orders</h1>
-    <button onclick="window.location.href='POInputCXml.html'">Create New</button>
-    <table>
-        <thead>
-            <tr>
-                <th>PO Number</th>
-                <th>Order Date</th>
-                <th>Buyer</th>
-                <th>Supplier</th>
-                <th>Total Amount</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Example row, replace with dynamic content as needed -->
-            <tr>
-                <td><a href="POInputCXml.html">12345</a></td>
-                <td>2023-10-01</td>
-                <td>John Doe</td>
-                <td>Acme Corp</td>
-                <td>$1000.00</td>
-                <td>Approved</td>
-            </tr>
-        </tbody>
-    </table>
-    <script>
-        function createNewPO() {
-            // Add logic to create a new purchase order
-            alert('Create New Purchase Order button clicked');
-        }
-    </script>
+    <nav>
+        <a href="POList.html">Purchase Orders</a>
+        <a href="POInputCXml.html">Create New PO</a>
+        <!-- Add more navigation links as needed -->
+    </nav>
+    <main>
+        <h1>Purchase Orders</h1>
+        <button onclick="window.location.href='POInputCXml.html'">Create New</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>PO Number</th>
+                    <th>Order Date</th>
+                    <th>Buyer</th>
+                    <th>Supplier</th>
+                    <th>Total Amount</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example row, replace with dynamic content as needed -->
+                <tr>
+                    <td><a href="POInputCXml.html">12345</a></td>
+                    <td>2023-10-01</td>
+                    <td>John Doe</td>
+                    <td>Acme Corp</td>
+                    <td>$1000.00</td>
+                    <td>Approved</td>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+            function createNewPO() {
+                // Add logic to create a new purchase order
+                alert('Create New Purchase Order button clicked');
+            }
+        </script>
+    </main>
 </body>
 </html>
