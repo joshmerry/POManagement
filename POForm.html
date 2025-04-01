@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Purchase Order</title>
+    <style>
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #1A73E8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1558b0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create Purchase Order</h1>
+    <form id="poForm">
+        <label for="poNumber">PO Number (Primary Key)</label>
+        <input type="text" id="poNumber" name="poNumber" required>
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description" placeholder="Optional description"></textarea>
+
+        <label for="effectiveDate">Effective Date</label>
+        <input type="date" id="effectiveDate" name="effectiveDate" required>
+
+        <label for="expirationDate">Expiration Date</label>
+        <input type="date" id="expirationDate" name="expirationDate" required>
+
+        <label for="status">Status</label>
+        <select id="status" name="status" required>
+            <option value="Active">Active</option>
+            <option value="Closed">Closed</option>
+        </select>
+
+        <label for="poAmount">PO Amount</label>
+        <input type="number" id="poAmount" name="poAmount" step="0.01" required>
+
+        <label for="currency">Currency</label>
+        <input type="text" id="currency" name="currency" required>
+
+        <label for="splitFlag">Split Flag</label>
+        <select id="splitFlag" name="splitFlag" required>
+            <option value="true">True</option>
+            <option value="false">False</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        document.getElementById('poForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const poData = Object.fromEntries(formData.entries());
+            console.log('Purchase Order Data:', poData);
+            alert('Purchase Order submitted successfully!');
+        });
+    </script>
+</body>
+</html>
