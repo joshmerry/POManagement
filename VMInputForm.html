@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Machine Input Form</title>
+    <style>
+        body {
+            display: flex;
+        }
+        .nav-bar {
+            width: 250px;
+            background-color: #2D2D2D;
+            color: white;
+            height: 100vh;
+            padding: 10px;
+        }
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px 0;
+        }
+        .nav-bar a:hover {
+            background-color: #1A73E8;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <h2>Azure Portal</h2>
+        <a href="#">Home</a>
+        <a href="#">Cost Management + Billing</a>
+        <a href="#">Invoices</a>
+        <a href="#"><strong>Purchase Orders</strong></a>
+        <a href="#">Payment Methods</a>
+        <a href="#">Cost Analysis</a>
+        <a href="#">Budgets</a>
+        <a href="#">Advisors</a>
+        <a href="#">Export</a>
+        <a href="#">Cloudyn</a>
+    </div>
+    <div class="content">
+        <h1>Virtual Machine Input Form</h1>
+        <form action="/submit-vm" method="post">
+            <label for="purchaseNumber">Purchase Number:</label>
+            <input type="text" id="purchaseNumber" name="purchaseNumber" required>
+
+            <label for="vmName">VM Name:</label>
+            <input type="text" id="vmName" name="vmName" required>
+
+            <label for="osType">Operating System:</label>
+            <select id="osType" name="osType" required>
+                <option value="Windows">Windows</option>
+                <option value="Linux">Linux</option>
+            </select>
+
+            <label for="vmSize">VM Size:</label>
+            <select id="vmSize" name="vmSize" required>
+                <option value="Standard_B1s">Standard_B1s</option>
+                <option value="Standard_B2s">Standard_B2s</option>
+                <option value="Standard_D2s_v3">Standard_D2s_v3</option>
+            </select>
+
+            <label for="region">Region:</label>
+            <select id="region" name="region" required>
+                <option value="East US">East US</option>
+                <option value="West US">West US</option>
+                <option value="Central US">Central US</option>
+            </select>
+
+            <label for="adminUsername">Admin Username:</label>
+            <input type="text" id="adminUsername" name="adminUsername" required>
+
+            <label for="adminPassword">Admin Password:</label>
+            <input type="password" id="adminPassword" name="adminPassword" required>
+
+            <input type="submit" value="Submit VM Configuration">
+        </form>
+    </div>
+</body>
+</html>
