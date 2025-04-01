@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purchase Order Input Form</title>
+    <title>Purchase Order Detail</title>
     <style>
         body {
             display: flex;
@@ -109,6 +109,46 @@
                             <td><input type="text" id="itemDescription3" name="itemDescription3" required></td>
                             <td><input type="number" id="quantity3" name="quantity3" required></td>
                             <td><input type="number" id="unitPrice3" name="unitPrice3" step="0.01" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <legend>Invoice Information</legend>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Invoice ID</th>
+                            <th>Invoice Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" id="invoiceID1" name="invoiceID1" required></td>
+                            <td><input type="date" id="invoiceDate1" name="invoiceDate1" required></td>
+                            <td><input type="number" id="amount1" name="amount1" step="0.01" required></td>
+                            <td>
+                                <select id="status1" name="status1" required>
+                                    <option value="Paid">Paid</option>
+                                    <option value="Pending">Pending</option>
+                                    <option value="Overdue">Overdue</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="invoiceID2" name="invoiceID2"></td>
+                            <td><input type="date" id="invoiceDate2" name="invoiceDate2"></td>
+                            <td><input type="number" id="amount2" name="amount2" step="0.01"></td>
+                            <td>
+                                <select id="status2" name="status2">
+                                    <option value="Paid">Paid</option>
+                                    <option value="Pending">Pending</option>
+                                    <option value="Overdue">Overdue</option>
+                                </select>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
