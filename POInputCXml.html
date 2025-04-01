@@ -57,105 +57,80 @@
     </div>
     <div class="content">
         <h1>Purchase Order View</h1>
-        <form action="/submit-po" method="post">
 
-            <label for="splitInvoice">Split Invoice:</label>
-            <input type="checkbox" id="splitInvoice" name="splitInvoice"><br><br>
+        <fieldset>
+            <legend>Order Information</legend>
+            <p><strong>Order ID:</strong> 12345</p>
+            <p><strong>Order Date:</strong> 2023-10-01</p>
+        </fieldset>
 
-            <fieldset>
-                <legend>Order Information</legend>
-                <label for="orderID">Order ID:</label>
-                <input type="text" id="orderID" name="orderID" required><br><br>
+        <fieldset>
+            <legend>Buyer Information</legend>
+            <p><strong>Buyer Name:</strong> John Doe</p>
+            <p><strong>Buyer Email:</strong> john.doe@example.com</p>
+        </fieldset>
 
-                <label for="orderDate">Order Date:</label>
-                <input type="date" id="orderDate" name="orderDate" required><br><br>
-            </fieldset>
+        <fieldset>
+            <legend>Item Information</legend>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item ID</th>
+                        <th>Item Description</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Example Item 1</td>
+                        <td>10</td>
+                        <td>$15.00</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Example Item 2</td>
+                        <td>5</td>
+                        <td>$25.00</td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Example Item 3</td>
+                        <td>2</td>
+                        <td>$50.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
 
-            <fieldset>
-                <legend>Buyer Information</legend>
-                <label for="buyerName">Buyer Name:</label>
-                <input type="text" id="buyerName" name="buyerName" required><br><br>
-
-                <label for="buyerEmail">Buyer Email:</label>
-                <input type="email" id="buyerEmail" name="buyerEmail" required><br><br>
-            </fieldset>
-
-            <fieldset>
-                <legend>Item Information</legend>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Item ID</th>
-                            <th>Item Description</th>
-                            <th>Quantity</th>
-                            <th>Unit Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><input type="text" id="itemID1" name="itemID1" required></td>
-                            <td><input type="text" id="itemDescription1" name="itemDescription1" required></td>
-                            <td><input type="number" id="quantity1" name="quantity1" required></td>
-                            <td><input type="number" id="unitPrice1" name="unitPrice1" step="0.01" required></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" id="itemID2" name="itemID2" required></td>
-                            <td><input type="text" id="itemDescription2" name="itemDescription2" required></td>
-                            <td><input type="number" id="quantity2" name="quantity2" required></td>
-                            <td><input type="number" id="unitPrice2" name="unitPrice2" step="0.01" required></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" id="itemID3" name="itemID3" required></td>
-                            <td><input type="text" id="itemDescription3" name="itemDescription3" required></td>
-                            <td><input type="number" id="quantity3" name="quantity3" required></td>
-                            <td><input type="number" id="unitPrice3" name="unitPrice3" step="0.01" required></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </fieldset>
-
-            <fieldset>
-                <legend>Invoice Information</legend>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Invoice ID</th>
-                            <th>Invoice Date</th>
-                            <th>Amount</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><input type="text" id="invoiceID1" name="invoiceID1" required></td>
-                            <td><input type="date" id="invoiceDate1" name="invoiceDate1" required></td>
-                            <td><input type="number" id="amount1" name="amount1" step="0.01" required></td>
-                            <td>
-                                <select id="status1" name="status1" required>
-                                    <option value="Paid">Paid</option>
-                                    <option value="Pending">Pending</option>
-                                    <option value="Overdue">Overdue</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" id="invoiceID2" name="invoiceID2"></td>
-                            <td><input type="date" id="invoiceDate2" name="invoiceDate2"></td>
-                            <td><input type="number" id="amount2" name="amount2" step="0.01"></td>
-                            <td>
-                                <select id="status2" name="status2">
-                                    <option value="Paid">Paid</option>
-                                    <option value="Pending">Pending</option>
-                                    <option value="Overdue">Overdue</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </fieldset>
-
-            <input type="submit" value="Submit Purchase Order">
-        </form>
+        <fieldset>
+            <legend>Invoice Information</legend>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Invoice ID</th>
+                        <th>Invoice Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>INV001</td>
+                        <td>2023-10-02</td>
+                        <td>$150.00</td>
+                        <td>Paid</td>
+                    </tr>
+                    <tr>
+                        <td>INV002</td>
+                        <td>2023-10-03</td>
+                        <td>$125.00</td>
+                        <td>Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
     </div>
 </body>
 </html>
