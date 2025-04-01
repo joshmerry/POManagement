@@ -57,7 +57,7 @@
 <body>
     <div class="nav-bar">
         <h2>Azure Portal</h2>
-        <a href="#">Home</a>
+        <a href="/index.html">Home</a>
         <a href="#">Cost Management + Billing</a>
         <a href="#">Invoices</a>
         <a href="#"><strong>Purchase Orders</strong></a>
@@ -72,9 +72,6 @@
     <div class="content">
         <h1>Virtual Machine Input Form</h1>
         <form action="/submit-vm" method="post">
-            <label for="purchaseNumber">Purchase Number:</label>
-            <input type="text" id="purchaseNumber" name="purchaseNumber" required>
-
             <label for="vmName">VM Name:</label>
             <input type="text" id="vmName" name="vmName" required>
 
@@ -103,6 +100,9 @@
 
             <label for="adminPassword">Admin Password:</label>
             <input type="password" id="adminPassword" name="adminPassword" required>
+
+            <label for="purchaseNumber">Purchase Number:</label>
+            <input type="text" id="purchaseNumber" name="purchaseNumber" required>
 
             <input type="submit" value="Submit VM Configuration">
         </form>
