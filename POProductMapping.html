@@ -7,39 +7,86 @@
     <style>
         body {
             display: flex;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
         }
         .nav-bar {
-            width: 250px;
-            background-color: #2D2D2D;
+            width: 220px;
+            background-color: #2b579a;
             color: white;
-            height: 100vh;
-            padding: 10px;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+        .nav-bar h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #fff;
         }
         .nav-bar a {
-            color: white;
-            text-decoration: none;
             display: block;
-            padding: 10px 0;
+            color: #d9e8fc;
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-size: 14px;
         }
         .nav-bar a:hover {
-            background-color: #1A73E8;
+            text-decoration: underline;
+            color: #fff;
         }
-        .content {
-            flex-grow: 1;
-            padding: 20px;
+        main {
+            flex: 1;
+            padding: 30px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            border-radius: 8px;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #2b579a;
         }
-        th, td {
+        form {
+            max-width: 600px;
+            margin-left: 0;
+            padding: 25px;
             border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        th {
-            background-color: #f2f2f2;
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #2b579a;
+            outline: none;
+            box-shadow: 0 0 5px rgba(43, 87, 154, 0.5);
+        }
+        button {
+            padding: 12px 20px;
+            background-color: #2b579a;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #1a3e72;
         }
     </style>
 </head>
