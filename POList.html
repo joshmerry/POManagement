@@ -3,15 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purchase Orders List</title>
+    <title>Product Mapping</title>
     <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
+        body {
+            display: flex;
         }
         .nav-bar {
             width: 250px;
@@ -29,38 +24,29 @@
         .nav-bar a:hover {
             background-color: #1A73E8;
         }
-        th {
-            background-color: #f2f2f2;
-            text-align: left;
-        }
-        body {
-            display: flex;
-        }
-        nav {
-            width: 200px;
-            background-color: #f8f8f8;
-            padding: 15px;
-            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-        }
-        nav a {
-            display: block;
-            padding: 10px 0;
-            color: #333;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #ddd;
-        }
-        main {
+        .content {
             flex-grow: 1;
             padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
         }
     </style>
 </head>
 <body>
     <div class="nav-bar">
         <h2>Azure Portal</h2>
-        <a href="#">Home</a>
+        <a href="/POList.html">Home</a>
         <a href="#">Cost Management + Billing</a>
         <a href="#">Invoices</a>
         <a href="#"><strong>Purchase Orders</strong></a>
@@ -70,63 +56,98 @@
         <a href="#">Advisors</a>
         <a href="#">Export</a>
         <a href="#">Cloudyn</a>
+        <a href="/POProductMapping.html">PO Product Mapping</a>
     </div>
-    <main>
-        <h1>Purchase Orders</h1>
-        <button onclick="window.location.href='POForm.html'">Create New</button>
+    <div class="content">
+        <h1>Product Mapping</h1>
+        <p>Content for product mapping will go here.</p>
         <table>
             <thead>
                 <tr>
                     <th>PO Number</th>
-                    <th>Order Date</th>
-                    <th>Buyer</th>
-                    <th>Supplier</th>
-                    <th>Total Amount</th>
-                    <th>Status</th>
+                    <th>Cost Center</th>
+                    <th>Product ID</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- Example row, replace with dynamic content as needed -->
                 <tr>
-                    <td><a href="POInputCXml.html">12345</a></td>
-                    <td>2023-10-01</td>
-                    <td>John Doe</td>
-                    <td>Acme Corp</td>
-                    <td>$1000.00</td>
-                    <td>Approved</td>
+                    <td>
+                        <select>
+                            <option value="12345">12345</option>
+                            <option value="12346">12346</option>
+                            <option value="12347">12347</option>
+                            <option value="12348">12348</option>
+                        </select>
+                    </td>
+                    <td><input type="text" value="CC001"></td>
+                    <td>
+                        <select>
+                            <option value="PID001">PID001</option>
+                            <option value="PID002">PID002</option>
+                            <option value="PID003">PID003</option>
+                            <option value="PID004">PID004</option>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
-                    <td><a href="POInputCXml.html">12346</a></td>
-                    <td>2023-10-02</td>
-                    <td>Jane Smith</td>
-                    <td>Global Supplies</td>
-                    <td>$2500.00</td>
-                    <td>Pending</td>
+                    <td>
+                        <select>
+                            <option value="12345">12345</option>
+                            <option value="12346">12346</option>
+                            <option value="12347">12347</option>
+                            <option value="12348">12348</option>
+                        </select>
+                    </td>
+                    <td><input type="text" value="CC002"></td>
+                    <td>
+                        <select>
+                            <option value="PID001">PID001</option>
+                            <option value="PID002">PID002</option>
+                            <option value="PID003">PID003</option>
+                            <option value="PID004">PID004</option>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
-                    <td><a href="POInputCXml.html">12347</a></td>
-                    <td>2023-10-03</td>
-                    <td>Michael Brown</td>
-                    <td>Tech Solutions</td>
-                    <td>$1500.00</td>
-                    <td>Rejected</td>
+                    <td>
+                        <select>
+                            <option value="12345">12345</option>
+                            <option value="12346">12346</option>
+                            <option value="12347">12347</option>
+                            <option value="12348">12348</option>
+                        </select>
+                    </td>
+                    <td><input type="text" value="CC003"></td>
+                    <td>
+                        <select>
+                            <option value="PID001">PID001</option>
+                            <option value="PID002">PID002</option>
+                            <option value="PID003">PID003</option>
+                            <option value="PID004">PID004</option>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
-                    <td><a href="POInputCXml.html">12348</a></td>
-                    <td>2023-10-04</td>
-                    <td>Emily Davis</td>
-                    <td>Office Supplies Co.</td>
-                    <td>$3000.00</td>
-                    <td>Approved</td>
+                    <td>
+                        <select>
+                            <option value="12345">12345</option>
+                            <option value="12346">12346</option>
+                            <option value="12347">12347</option>
+                            <option value="12348">12348</option>
+                        </select>
+                    </td>
+                    <td><input type="text" value="CC004"></td>
+                    <td>
+                        <select>
+                            <option value="PID001">PID001</option>
+                            <option value="PID002">PID002</option>
+                            <option value="PID003">PID003</option>
+                            <option value="PID004">PID004</option>
+                        </select>
+                    </td>
                 </tr>
             </tbody>
         </table>
-        <script>
-            function createNewPO() {
-                // Add logic to create a new purchase order
-                alert('Create New Purchase Order button clicked');
-            }
-        </script>
-    </main>
+    </div>
 </body>
 </html>
